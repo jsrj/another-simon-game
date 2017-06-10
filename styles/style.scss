@@ -38,25 +38,29 @@ h1 {
 #blue.light-on {
   background: rgba(66, 134, 244, 1.0);
 }
+
 #yellow {
   border-bottom-left-radius: 100%;
   background: rgba(239, 206, 38, 0.5);
 }
-#yellow:hover {
+#yellow:hover,
+#yellow.light-on {
   background: rgba(239, 206, 38, 1.0);
 }
 #red {
   border-top-right-radius: 100%;
   background: rgba(239, 66, 43, 0.5);
 }
-#red:hover {
+#red:hover,
+#red.light-on {
   background: rgba(239, 66, 43, 1.0);
 }
 #green {
   border-top-left-radius: 100%;
   background: rgba(127, 232, 53, 0.5);
 }
-#green:hover {
+#green:hover,
+#green.light-on {
   background: rgba(127, 232, 53, 1.0);
 }
 
