@@ -17,6 +17,11 @@
     // Starts the Simon game
     SimonGame.prototype.startGame = function(){
       console.log('Starting the game...');
+      this.sequence = [];
+      // Where the user is in the sequence.
+      this.userClickCount = 0;
+      // What the player's score is
+      this.round = 0;
 
       this.addColor();
       this.showSequence();
@@ -30,13 +35,15 @@
 
     // Blinks the buttons based on the current color sequence
     SimonGame.prototype.showSequence = function () {
-      // $('#score-counter').html(this.round);
       var ourSequence = this.sequence;
       var i = 0;
+      $('#buttons-container').addClass('blocked');
 
       var intervalID = setInterval(function(){
         if (i >= ourSequence.length) {
           clearInterval(intervalID);
+          $('#buttons-container').removeClass('blocked');
+
           return;
         }
         // Turns on the light by adding class='light-on'
@@ -61,5 +68,13 @@
     $('#score-counter').html(this.round);
       };
 
+  SimonGame.prototype.gameOver = function () {
+    this.sequence = [];
+    this.userClickCount = 0;
+    this.round = 0;
+    $('#score-counter').html(0);
+
+    this.startGame();
+  };
 
 /* No more Coffee and Sugar */

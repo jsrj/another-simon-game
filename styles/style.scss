@@ -28,7 +28,7 @@ h1 {
   position: relative;
 
   width: 800px;
-  margin: 0 20% !important;
+  margin: 0 30% !important;
 }
 #blue {
   border-bottom-right-radius: 100%;
@@ -85,4 +85,16 @@ h1 {
   font-size: 32pt;
   line-height: 200px;
 
+}
+
+.blocked {
+  pointer-events: none;
+}
+
+.sequence-entered {
+  background-image: url('../assets/yes.gif');
+}
+
+.game-over {
+  background-image: url('../assets/no.gif');
 }

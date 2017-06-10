@@ -14,16 +14,27 @@ $(document).ready(function() {
     var colorJustClicked = $(this).prop('id');
     var currentSequenceColor = myGame.sequence[myGame.userClickCount];
       if (currentSequenceColor === colorJustClicked) {
-        //sequence is correct so far
+        myGame.userClickCount += 1;
             }
       else {
         // GAME OVER
-        alert('game over');
+        $('body').addClass('game-over');
+
+        setTimeout(function() {
+          $('body').removeClass('game-over');
+        }, 1500);
+
+        myGame.gameOver();
       }
-        myGame.userClickCount += 1;
+
 
       if (myGame.userClickCount >= myGame.sequence.length) {
-        alert('sequence correct');
+        $('body').addClass('sequence-entered');
+
+        setTimeout(function() {
+          $('body').removeClass('sequence-entered');
+        }, 1000);
+
         myGame.nextRound();
       }
   });
