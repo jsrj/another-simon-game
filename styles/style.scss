@@ -34,7 +34,8 @@ h1 {
   border-bottom-right-radius: 100%;
   background: rgba(66, 134, 244, 0.5);
 }
-#blue:hover {
+#blue:hover,
+#blue.light-on {
   background: rgba(66, 134, 244, 1.0);
 }
 #yellow {
