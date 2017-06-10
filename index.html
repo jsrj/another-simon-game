@@ -7,17 +7,18 @@
     <meta charset="utf-8">
 
     <!-- Who Am I? -->
-    <title> | Simon !! | </title>
+    <title> | Simon | </title>
     <link rel="shortcut icon" href="assets/icons/favicon.ico" type="image/x-icon">
 
     <!-- Reset default CSS -->
     <link href="styles/reset.min.css" type="text/css" rel="stylesheet">
-
     <!-- Load Bootstrap CSS -->
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css">
-
+    <link href="bootstrap/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <!-- Extra Fonts Here -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
     <!-- Custom Styles via SCSS -->
     <link href="styles/style.min.css" type="text/css" rel="stylesheet">
+
 
 
   </head>
@@ -25,9 +26,18 @@
 
 
     <!-- All The Meat and Potatoes -->
+          <h1> Just Another Simon Game </h1>
 
-          <!-- START HERE -->
+          <section id="buttons-container">
+            <button id ="green"></button>
+            <button id="red"></button>
+            <button id="yellow"></button>
+            <button id="blue"></button>
 
+            <div id="score-counter">
+              0
+            </div>
+          </section>
     <!-- No more Meat and Potatoes -->
 
 
@@ -36,6 +46,7 @@
     <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
     <!-- My Script(s) -->
     <script type="text/javascript" src="scripts/app.js"></script>
+    <script type="text/javascript" src="scripts/simon.js"></script>
 
 
   </body>
